@@ -3,14 +3,13 @@ using System.IO.Pipes;
 using System.Security.Principal;
 using System.Text;
 using System.Threading;
-
 using System.IO;
 
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApp1
+namespace FuelViewer
 {
     class ClientPipe
     {
@@ -25,10 +24,22 @@ namespace WindowsFormsApp1
 
         public void Connect()
         {
-            pipe.Connect();
+            try
+            {
+                pipe.Connect(20);
+            }
+            catch(Exception e)
+            {
+                Exception x = e.GetBaseException();
+                if( x.Equals(new TimeoutException()) )
+                {
+
+                }
+            }
+            
         }
 
-        public String ReadString()
+        public String[] ReadString()
         {
             int length;
             length = ioStream.ReadByte() * 256;
@@ -36,14 +47,16 @@ namespace WindowsFormsApp1
             var inBuffer = new byte[length];
             ioStream.Read(inBuffer, 0, length);
 
-            return encoder.GetString(inBuffer);
+            String msg = encoder.GetString(inBuffer);
+
+            return msg.Split();
         }
 
         public int WriteString(string outString)
         {
             byte[] outbuffer = encoder.GetBytes(outString);
             int length = outbuffer.Length;
-            if( length > UInt16.MaxValue)
+            if (length > UInt16.MaxValue)
             {
                 length = (int)UInt16.MaxValue;
             }

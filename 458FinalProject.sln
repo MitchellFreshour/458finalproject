@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ProcessScheduler", "ProcessScheduler\ProcessScheduler.vcxproj", "{98E141F7-4A8B-44F3-A911-E79AC1AA87DB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuelViewer", "FuelViewer\FuelViewer.csproj", "{B3274B81-480A-4E96-A3BB-7E2557058E7A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{98E141F7-4A8B-44F3-A911-E79AC1AA87DB} = {98E141F7-4A8B-44F3-A911-E79AC1AA87DB}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

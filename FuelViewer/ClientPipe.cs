@@ -24,19 +24,7 @@ namespace FuelViewer
 
         public void Connect()
         {
-            try
-            {
-                pipe.Connect(20);
-            }
-            catch(Exception e)
-            {
-                Exception x = e.GetBaseException();
-                if( x.Equals(new TimeoutException()) )
-                {
-
-                }
-            }
-            
+            pipe.Connect();
         }
 
         public String[] ReadString()

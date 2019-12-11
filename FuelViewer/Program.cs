@@ -19,7 +19,7 @@ namespace FuelViewer
             Application.Run(new Form1());
 
             ClientPipe pipe = new ClientPipe();
-            
+            pipe.Connect();
 
         }
     }

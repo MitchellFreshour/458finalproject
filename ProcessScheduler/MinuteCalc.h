@@ -2,14 +2,16 @@
 #ifndef H_MINUTECALC
 #define H_MINUTECALC
 
+#include "AperiodicTask.h"
 #include<time.h>
 
-class MinuteCalc
+class MinuteCalc : public AperiodicTask
 {
 
 public:
 	MinuteCalc(double fuelLevel);
-	double Calculate(double fuelLevel);
+	MinuteCalc() = default;
+	double Calculate(double fuelLevel) override;
 	time_t getInitTime();
 protected:
 	int runTime;

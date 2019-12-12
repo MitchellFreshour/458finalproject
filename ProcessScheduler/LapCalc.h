@@ -7,6 +7,9 @@ class LapCalc
 public:
 	LapCalc(double fuelLevel);
 	double Calculate(double fuelLevel);
+protected:
+	int runTime;
+	int readyTime;
 private:
 	double lastFuelLevel;
 };

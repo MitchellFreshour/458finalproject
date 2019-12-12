@@ -2,15 +2,15 @@
 #ifndef H_TOTALCALC
 #define H_TOTALCALC
 
+#include "PeriodicTask.h"
 #include <time.h>
 
-class TotalCalc
+class TotalCalc : PeriodicTask
 {
 public:
 	TotalCalc(double fuelLevel);
-	double Calculate(double fuelLevel);
+	double Calculate(double fuelLevel) override;
 private:
-	double initFuelLevel;
 	time_t initTime;
 };
 #endif // !H_TOTALCALC

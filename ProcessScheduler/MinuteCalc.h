@@ -11,7 +11,9 @@ public:
 	MinuteCalc(double fuelLevel);
 	double Calculate(double fuelLevel);
 	time_t getInitTime();
-
+protected:
+	int runTime;
+	int readyTime;
 private:
 	double lastFuelLevel;
 	time_t initTime;

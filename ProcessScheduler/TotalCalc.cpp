@@ -4,13 +4,12 @@
 
 TotalCalc::TotalCalc(double fuelLevel) 
 {
-	initFuelLevel = fuelLevel;
 	initTime = time(NULL);
 }
 
 double TotalCalc::Calculate(double fuelLevel)
 {
-	double totalConsumed = initFuelLevel - fuelLevel;
+	double totalConsumed = this->fuelLevel - fuelLevel;
 	time_t totalTime = difftime(time(NULL), initTime);
 	return totalConsumed / totalTime;
 }

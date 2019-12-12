@@ -9,9 +9,9 @@ class InstantCalc : public PeriodicTask
 {
 
 public:
-	InstantCalc(double fuelLevel, int runTime, int readyTime) = default;
+	InstantCalc(double fuelLevel, int runTime, int readyTime);
+	InstantCalc() = default;
 	double Calculate(double fuelLevel) override;
-	InstantCalc operator=(const InstantCalc other);
 private:
 	double fuelConsumed;
 	clock_t startTime;

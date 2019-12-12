@@ -9,7 +9,6 @@ class PeriodicTask
 public:
 	PeriodicTask() = default;
 	virtual double Calculate(double fuelLevel) { return fuelLevel; };
-	double getFuelLevel() { return fuelLevel; };
 	double fuelLevel;
 protected:
 	int runTime;

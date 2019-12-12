@@ -9,6 +9,7 @@ class TotalCalc : PeriodicTask
 {
 public:
 	TotalCalc(double fuelLevel);
+	TotalCalc() = default;
 	double Calculate(double fuelLevel) override;
 private:
 	time_t initTime;

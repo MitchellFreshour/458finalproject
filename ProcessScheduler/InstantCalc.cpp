@@ -21,14 +21,3 @@ double InstantCalc::Calculate(double fuelLevel)
 	startTime = clock();
 	return fuelConsumed/elapsedTime;
 }
-
-InstantCalc InstantCalc::operator=(const InstantCalc other)
-{
-	this->fuelLevel = other.fuelLevel;
-	this->runTime = other.runTime;
-	this->readyTime = other.readyTime;
-	fuelConsumed = other.fuelConsumed;
-	startTime = other.startTime;
-	endTime = other.endTime;
-	return *this;
-}

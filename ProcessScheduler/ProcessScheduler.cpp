@@ -8,7 +8,8 @@
 
 int main()
 {
-
+	FuelTank tank(100);
+	PeriodicScheduler p(tank.getFuelLevel());
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

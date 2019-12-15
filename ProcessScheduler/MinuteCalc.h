@@ -9,13 +9,12 @@ class MinuteCalc : public AperiodicTask
 {
 
 public:
-	MinuteCalc(double fuelLevel);
+	MinuteCalc(double fuelLevel, int runTime);
 	MinuteCalc() = default;
 	double Calculate(double fuelLevel) override;
 	time_t getInitTime();
 protected:
 	int runTime;
-	int readyTime;
 private:
 	double lastFuelLevel;
 	time_t initTime;

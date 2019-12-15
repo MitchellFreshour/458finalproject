@@ -2,14 +2,16 @@
 #ifndef H_LAPCALC
 #define H_LAPCALC
 
-class LapCalc
+#include "AperiodicTask.h"
+
+class LapCalc : public AperiodicTask
 {
 public:
-	LapCalc(double fuelLevel);
-	double Calculate(double fuelLevel);
+	LapCalc(double fuelLevel, int runTime);
+	LapCalc() = default;
+	double Calculate(double fuelLevel) override;
 protected:
 	int runTime;
-	int readyTime;
 private:
 	double lastFuelLevel;
 };

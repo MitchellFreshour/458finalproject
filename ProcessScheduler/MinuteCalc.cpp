@@ -2,8 +2,9 @@
 #include "pch.h"
 #include "MinuteCalc.h"
 
-MinuteCalc::MinuteCalc(double fuelLevel)
+MinuteCalc::MinuteCalc(double fuelLevel, int runTime)
 {
+	this->runTime = runTime;
 	lastFuelLevel = fuelLevel;
 	initTime = time(NULL);
 }

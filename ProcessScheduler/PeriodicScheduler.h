@@ -9,11 +9,12 @@ class PeriodicScheduler
 {
 public:
 	PeriodicScheduler(double fuelLevel);
-	PeriodicTask SelectProcess();
+	double SelectAndRun(double fuelLevel);
 
 private:
 	TotalCalc totalCalc;
 	InstantCalc instantCalc;
+	int count;
 };
 
 #endif // !H_PERIODICSCHEDULER

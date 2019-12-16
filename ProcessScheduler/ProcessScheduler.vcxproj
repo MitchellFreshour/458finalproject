@@ -152,6 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="AperiodicTask.h" />
+    <ClInclude Include="DifferableServer.h" />
     <ClInclude Include="FuelTank.h" />
     <ClInclude Include="LapCalc.h" />
     <ClInclude Include="MinuteCalc.h" />
@@ -164,6 +165,7 @@
     <ClInclude Include="TotalCalc.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DifferableServer.cpp" />
     <ClCompile Include="FuelTank.cpp" />
     <ClCompile Include="InstantCalc.cpp" />
     <ClCompile Include="LapCalc.cpp" />

@@ -3,11 +3,12 @@
 
 PeriodicScheduler::PeriodicScheduler(double fuelLevel)
 {
-	totalCalc = TotalCalc(fuelLevel);
-	instantCalc = InstantCalc(15, 2, 4);
+	totalCalc = TotalCalc(fuelLevel, 4, 12);
+	instantCalc = InstantCalc(15, 4, 12);
+	count = 1;
 }
 
-PeriodicTask PeriodicScheduler::SelectProcess()
+double PeriodicScheduler::SelectAndRun(double fuelLevel)
 {
-	return instantCalc;
+	return instantCalc.Calculate(fuelLevel);
 }

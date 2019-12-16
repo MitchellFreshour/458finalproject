@@ -3,13 +3,24 @@
 
 #include "pch.h"
 #include <iostream>
+#include <thread>
 #include "PeriodicScheduler.h"
+#include "DifferableServer.h"
 #include "FuelTank.h"
 
 int main()
 {
-	FuelTank tank(100);
+	FuelTank tank(1000);
 	PeriodicScheduler p(tank.getFuelLevel());
+	DIfferableServer d(tank.getFuelLevel(), 4, 24);
+	double calculations[4] = { 0.0, 0.0, 0.0, 0.0 };
+
+	for (int i = 1; i < 1000; i++)
+	{
+		std::chrono::milliseconds time(100);
+		double returned = p.SelectAndRun(tank.getFuelLevel() - i);
+		std::this_thread::sleep_for(time);
+	}
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "DifferableServer.h"
 
-DIfferableServer::DIfferableServer(double fuelLevel, int runTime, int readyTime)
+DifferableServer::DifferableServer(double fuelLevel, int runTime, int readyTime)
 {
 	this->runTime = runTime;
 	this->readyTime = readyTime;
@@ -9,7 +9,7 @@ DIfferableServer::DIfferableServer(double fuelLevel, int runTime, int readyTime)
 	lapCalc = LapCalc(fuelLevel, 2);
 }
 
-AperiodicTask DIfferableServer::SelectProcess()
+AperiodicTask DifferableServer::SelectProcess()
 {
 	return lapCalc;
 }

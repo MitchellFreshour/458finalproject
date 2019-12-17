@@ -159,6 +159,7 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="PeriodicScheduler.h" />
     <ClInclude Include="PeriodicTask.h" />
+    <ClInclude Include="PollingServer.h" />
     <ClInclude Include="ProcessScheduler.h" />
     <ClInclude Include="InstantCalc.h" />
     <ClInclude Include="ServerPipe.h" />
@@ -177,6 +178,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="PeriodicScheduler.cpp" />
+    <ClCompile Include="PollingServer.cpp" />
     <ClCompile Include="ProcessScheduler.cpp" />
     <ClCompile Include="TotalCalc.cpp" />
   </ItemGroup>

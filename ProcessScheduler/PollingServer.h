@@ -1,14 +1,14 @@
 #pragma once
-#ifndef H_DIFFERABLESERVER
-#define H_DIFFERABLESERVER
+#ifndef H_POLLINGSERVER
+#define H_POLLINGSERVER
 
 #include "MinuteCalc.h"
 #include "LapCalc.h"
 
-class DifferableServer
+class PollingServer
 {
 public:
-	DifferableServer(double fuelLevel, int runTime, int readyTime);
+	PollingServer(double fuelLevel, int runTime, int readyTime);
 	AperiodicTask SelectProcess();
 
 private:
@@ -18,4 +18,4 @@ private:
 	int readyTime;
 };
 
-#endif // !H_DIFFERABLESERVER
+#endif // !H_POLLINGSERVER

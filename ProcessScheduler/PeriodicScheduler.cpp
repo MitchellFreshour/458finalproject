@@ -1,10 +1,11 @@
 #include "pch.h"
 #include "PeriodicScheduler.h"
+#include "PeriodicTask.h"
 
 PeriodicScheduler::PeriodicScheduler(double fuelLevel)
 {
-	totalCalc = TotalCalc(fuelLevel, 3, 10);
-	instantCalc = InstantCalc(fuelLevel, 3, 5);
+	totalCalc = TotalCalc(fuelLevel, 10, 25);
+	instantCalc = InstantCalc(fuelLevel, 5, 10);
 }
 
 double PeriodicScheduler::SelectAndRun(double fuelLevel, int curTime)
@@ -14,7 +15,7 @@ double PeriodicScheduler::SelectAndRun(double fuelLevel, int curTime)
 
 	if (totalReady && instantReady) 
 	{
-
+		return instantCalc.Calculate(fuelLevel);
 	}
 	else if (totalReady)
 	{
@@ -26,6 +27,6 @@ double PeriodicScheduler::SelectAndRun(double fuelLevel, int curTime)
 	}
 	else
 	{
-		return 0.0;
+		return -1;
 	}
 }

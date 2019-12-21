@@ -151,7 +151,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AperiodicServer.h" />
     <ClInclude Include="AperiodicTask.h" />
+    <ClInclude Include="CombinedScheduler.h" />
     <ClInclude Include="DifferableServer.h" />
     <ClInclude Include="FuelTank.h" />
     <ClInclude Include="LapCalc.h" />
@@ -159,13 +161,14 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="PeriodicScheduler.h" />
     <ClInclude Include="PeriodicTask.h" />
-    <ClInclude Include="PollingServer.h" />
+    <ClInclude Include="SporadicServer.h" />
     <ClInclude Include="ProcessScheduler.h" />
     <ClInclude Include="InstantCalc.h" />
     <ClInclude Include="ServerPipe.h" />
     <ClInclude Include="TotalCalc.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CombinedScheduler.cpp" />
     <ClCompile Include="DifferableServer.cpp" />
     <ClCompile Include="FuelTank.cpp" />
     <ClCompile Include="InstantCalc.cpp" />
@@ -178,7 +181,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="PeriodicScheduler.cpp" />
-    <ClCompile Include="PollingServer.cpp" />
+    <ClCompile Include="SporadicServer.cpp" />
     <ClCompile Include="ProcessScheduler.cpp" />
     <ClCompile Include="TotalCalc.cpp" />
   </ItemGroup>

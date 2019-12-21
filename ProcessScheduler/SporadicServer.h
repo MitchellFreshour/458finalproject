@@ -1,16 +1,16 @@
 #pragma once
-#ifndef H_DIFFERABLESERVER
-#define H_DIFFERABLESERVER
+#ifndef H_SPORADICSERVER
+#define H_SPORADICSERVER
 
 #include "AperiodicServer.h"
 #include "MinuteCalc.h"
 #include "LapCalc.h"
 
-class DifferableServer
+class SporadicServer
 {
 public:
-	DifferableServer(double fuelLevel, int runTime);
-	DifferableServer() = default;
+	SporadicServer(double fuelLevel, int runTime);
+	SporadicServer() = default;
 	double SelectAndRun(double fuelLevel, int curTime);
 	bool ShouldRun();
 
@@ -20,4 +20,4 @@ private:
 	int runTime;
 };
 
-#endif // !H_DIFFERABLESERVER
+#endif // !H_SPORADICSERVER

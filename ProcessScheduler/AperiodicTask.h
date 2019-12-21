@@ -6,7 +6,7 @@ class AperiodicTask
 {
 public:
 	AperiodicTask() = default;
-	virtual double Calculate(double fuelLevel) {return fuelLevel;};
+	virtual double Calculate(double fuelLevel) = 0;
 	double fuelLevel;
 protected:
 	int runTime;

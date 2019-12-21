@@ -51,7 +51,13 @@
     <ClInclude Include="DifferableServer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PollingServer.h">
+    <ClInclude Include="CombinedScheduler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AperiodicServer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SporadicServer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -83,7 +89,10 @@
     <ClCompile Include="DifferableServer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PollingServer.cpp">
+    <ClCompile Include="CombinedScheduler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SporadicServer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

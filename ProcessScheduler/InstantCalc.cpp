@@ -9,6 +9,7 @@ InstantCalc::InstantCalc(double fuelLevel, int runTime, int readyTime)
 	this->fuelLevel = fuelLevel;
 	this->runTime = runTime;
 	this->readyTime = readyTime;
+	this->nextReadyTime = 0;
 	fuelConsumed = 0;
 	startTime = clock();
 }
@@ -24,6 +25,19 @@ double InstantCalc::Calculate(double fuelLevel)
 	fuelConsumed = this->fuelLevel - fuelLevel;
 	std::cout << std::setprecision(9) << "Average: " << fuelConsumed/elapsedTime << std::endl;
 	this->fuelLevel = fuelLevel;
+	Completed();
 	startTime = clock();
 	return fuelConsumed/elapsedTime;
+}
+
+bool InstantCalc::isReady(int curTime)
+{
+	if (this->nextReadyTime >= curTime)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }

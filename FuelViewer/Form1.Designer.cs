@@ -104,6 +104,7 @@
             this.currentUsageBox.ReadOnly = true;
             this.currentUsageBox.Size = new System.Drawing.Size(50, 23);
             this.currentUsageBox.TabIndex = 6;
+            this.currentUsageBox.Text = "1.76";
             // 
             // avgFuelBox
             // 
@@ -114,6 +115,7 @@
             this.avgFuelBox.ReadOnly = true;
             this.avgFuelBox.Size = new System.Drawing.Size(50, 23);
             this.avgFuelBox.TabIndex = 7;
+            this.avgFuelBox.Text = "3.05";
             // 
             // lastMinFuelBox
             // 
@@ -124,6 +126,7 @@
             this.lastMinFuelBox.ReadOnly = true;
             this.lastMinFuelBox.Size = new System.Drawing.Size(50, 23);
             this.lastMinFuelBox.TabIndex = 8;
+            this.lastMinFuelBox.Text = "3.10";
             // 
             // lastLapFuelBox
             // 
@@ -134,6 +137,7 @@
             this.lastLapFuelBox.ReadOnly = true;
             this.lastLapFuelBox.Size = new System.Drawing.Size(50, 23);
             this.lastLapFuelBox.TabIndex = 9;
+            this.lastLapFuelBox.Text = "2.82";
             // 
             // Form1
             // 

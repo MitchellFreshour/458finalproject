@@ -2,24 +2,21 @@
 //
 
 #include "pch.h"
-#include <iostream>
+#include "CombinedScheduler.h"
+#include <chrono>
 #include <thread>
-#include "PeriodicScheduler.h"
-#include "DifferableServer.h"
-#include "FuelTank.h"
 
 int main()
 {
-	FuelTank tank(1000);
-	PeriodicScheduler p(tank.getFuelLevel());
-	DIfferableServer d(tank.getFuelLevel(), 4, 24);
-	double calculations[4] = { 0.0, 0.0, 0.0, 0.0 };
-
-	for (int i = 1; i < 1000; i++)
+	int curTime = 0;
+	CombinedScheduler scheduler = CombinedScheduler(50.0, curTime);
+	FuelTank tank = FuelTank(50.0, 1, 10);
+	while (tank.getFuelLevel() >= 0)
 	{
-		std::chrono::milliseconds time(100);
-		double returned = p.SelectAndRun(tank.getFuelLevel() - i);
-		std::this_thread::sleep_for(time);
+
+		scheduler.Run(curTime);
+		curTime++;
+		std::this_thread::sleep_for(std::chrono::milliseconds(100));
 	}
 }
 

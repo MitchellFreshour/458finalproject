@@ -11,6 +11,7 @@ public:
 	TotalCalc(double fuelLevel, int runTime, int readyTime);
 	TotalCalc() = default;
 	double Calculate(double fuelLevel) override;
+	bool isReady(int curTime);
 private:
 	clock_t initTime;
 };

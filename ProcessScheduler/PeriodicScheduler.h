@@ -9,6 +9,7 @@ class PeriodicScheduler
 {
 public:
 	PeriodicScheduler(double fuelLevel);
+	PeriodicScheduler() = default;
 	double SelectAndRun(double fuelLevel, int curTime);
 
 private:
